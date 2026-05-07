@@ -105,15 +105,39 @@ android {
             proguardFiles getDefaultProguardFile("proguard-android.txt"), "proguard-rules.pro"
         }
     }
+
+    packagingOptions {
+        pickFirst 'lib/x86/libc++_shared.so'
+        pickFirst 'lib/x86_64/libc++_shared.so'
+        pickFirst 'lib/armeabi-v7a/libc++_shared.so'
+        pickFirst 'lib/arm64-v8a/libc++_shared.so'
+    }
 }
 
-dependencies {
+/*dependencies {
     // The version of react-native is set by the React Native Gradle Plugin
     implementation("com.facebook.react:react-android")
-
+    implementation "com.google.android.gms:play-services-wearable:18.2.0"
+implementation 'org.tensorflow:tensorflow-lite:2.16.1'
+implementation 'org.tensorflow:tensorflow-lite-support:0.4.4'
     if (hermesEnabled.toBoolean()) {
         implementation("com.facebook.react:hermes-android")
     } else {
         implementation jscFlavor
     }
-}
+}*/
+dependencies {
+    implementation("com.facebook.react:react-android")
+    
+    // Онови версію до 19.0.0, щоб була як на годиннику
+    implementation "com.google.android.gms:play-services-wearable:19.0.0" 
+
+    // Виправлення конфлікту TensorFlow
+    implementation 'org.tensorflow:tensorflow-lite:2.14.0' // Спробуй 2.14.0, вона стабільніша
+    implementation 'org.tensorflow:tensorflow-lite-support:0.4.4'
+   if (hermesEnabled.toBoolean()) {
+        implementation("com.facebook.react:hermes-android")
+    } else {
+        implementation jscFlavor
+    }
+    }

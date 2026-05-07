@@ -7,7 +7,7 @@ import { useNavigation } from '@react-navigation/native';
 import type { NativeStackNavigationProp } from '@react-navigation/native-stack';
 import type { RootStackParamList } from '../navigation/AppNavigator';
 
-import { useSensorData } from '../hooks/useSensorData';
+import { useSensorData, startMockSensorData } from '../hooks/useSensorData';
 import { useSleepStore } from '../store/useSleepStore';
 import { resetProcessor } from '../services/SleepProcessor';
 import { stopAlarm } from '../services/AlarmService';
@@ -27,8 +27,12 @@ const SleepTrackingScreen = () => {
   const [time, setTime] = useState(new Date());
 
   // Підключаємо слухач нативних подій — КЛЮЧОВА ЧАСТИНА
-  useSensorData();
+useSensorData();
 
+useEffect(() => {
+  const stop = startMockSensorData();
+  return stop;
+}, []);
   const { currentPhase, alarmTriggered, resetAlarm, setTracking } = useSleepStore();
 
   // Оновлення годинника

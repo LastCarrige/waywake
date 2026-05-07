@@ -91,9 +91,18 @@ class SensorBridgeModule(reactContext: ReactApplicationContext)
         setContext(reactContext)
     }
 
+
     // Метод для JS — перевірити чи міст живий (опціонально)
     @ReactMethod
     fun isConnected(promise: Promise) {
         promise.resolve(true)
     }
+
+    // Обов'язкові для нової архітектури RN
+    @ReactMethod
+    fun addListener(eventName: String) {}
+
+    @ReactMethod
+    fun removeListeners(count: Int) {}
+
 }
