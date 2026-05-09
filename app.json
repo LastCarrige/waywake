@@ -1,4 +1,7 @@
 {
   "name": "waywake",
-  "displayName": "waywake"
+  "displayName": "waywake",
+  "plugins": [
+    "expo-sqlite"
+  ]
 }
