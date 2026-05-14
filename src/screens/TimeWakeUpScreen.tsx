@@ -62,7 +62,7 @@ export default function TimeWakeUpScreen() {
 
   return (
     <ImageBackground 
-      source={require('../../assets/images/TimeWakeUp.png')} 
+      source={require('../assets/images/TimeWakeUp.png')}
       style={styles.container}
     >
       <View style={styles.contentWrapper}>

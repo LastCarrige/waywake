@@ -27,16 +27,16 @@ export default function SettingsScreen() {
 
   return (
     <ImageBackground 
-      source={isDark ? require('../../assets/images/background1.png') : require('../../assets/images/background_light.png')} 
+      source={isDark ? require('../assets/images/background1.png') : require('../assets/images/background_light.png')}
       style={[styles.container, { backgroundColor: isDark ? '#071225' : '#F0F4F8' }]}
       resizeMode="cover"
     >
       <View style={styles.fixedHeader}>
         <View style={styles.smallLogoContainer}>
-          <Image source={require('../../assets/images/logo_bg.png')} style={styles.logoLayer} />
-          <Image source={require('../../assets/images/logo_moon.png')} style={[styles.logoLayer, { width: '60%', height: '60%' }]} />
-          <Image source={require('../../assets/images/logo_pin.png')} style={[styles.logoLayer, { width: '40%', height: '40%' }]} />
-          <Image source={require('../../assets/images/logo_dot.png')} style={[styles.logoLayer, { width: '15%', height: '15%' }]} />
+          <Image source={require('../assets/images/logo_bg.png')} style={styles.logoLayer} />
+          <Image source={require('../assets/images/logo_moon.png')} style={[styles.logoLayer, { width: '60%', height: '60%' }]} />
+          <Image source={require('../assets/images/logo_pin.png')} style={[styles.logoLayer, { width: '40%', height: '40%' }]} />
+          <Image source={require('../assets/images/logo_dot.png')} style={[styles.logoLayer, { width: '15%', height: '15%' }]} />
         </View>
 
         <View style={styles.headerContent}>
@@ -49,7 +49,7 @@ export default function SettingsScreen() {
             </TouchableOpacity>
             <Text style={[styles.headerTitle, { color: textColor }]}>Settings</Text>
           </View>
-          <Image source={require('../../assets/images/Header-line.png')} style={[styles.headerLine, { tintColor: textColor }]} resizeMode="stretch" />
+          <Image source={require('../assets/images/Header-line.png')} style={[styles.headerLine, { tintColor: textColor }]} resizeMode="stretch" />
         </View>
       </View>
 
@@ -67,13 +67,13 @@ export default function SettingsScreen() {
                 style={[styles.themeBtn, !isDark && styles.activeBtn]} 
                 onPress={() => isDark && toggleTheme()}
               >
-                <Image source={require('../../assets/images/sun-icon.png')} style={[styles.themeIcon, { tintColor: !isDark ? '#000' : '#FFF' }]} />
+                <Image source={require('../assets/images/sun-icon.png')} style={[styles.themeIcon, { tintColor: !isDark ? '#000' : '#FFF' }]} />
               </TouchableOpacity>
               <TouchableOpacity 
                 style={[styles.themeBtn, isDark && styles.activeBtn]} 
                 onPress={() => !isDark && toggleTheme()}
               >
-                <Image source={require('../../assets/images/moon-icon.png')} style={[styles.themeIcon, { tintColor: isDark ? '#000' : '#FFF' }]} />
+                <Image source={require('../assets/images/moon-icon.png')} style={[styles.themeIcon, { tintColor: isDark ? '#000' : '#FFF' }]} />
               </TouchableOpacity>
             </View>
           </View>
@@ -101,7 +101,7 @@ export default function SettingsScreen() {
           <Text style={[styles.cardLabel, { color: textColor }]}>Smartwatch</Text>
           <View style={styles.watchRow}>
             <View style={styles.watchLeft}>
-              <Image source={require('../../assets/images/watch-icon.png')} style={[styles.watchIcon, { tintColor: isDark ? undefined : '#071225' }]} />
+              <Image source={require('../assets/images/watch-icon.png')} style={[styles.watchIcon, { tintColor: isDark ? undefined : '#071225' }]} />
               <View>
                 <Text style={[styles.watchName, { color: textColor }]}>Samsung Watch</Text>
                 <Text style={styles.watchStatus}>Connected</Text>

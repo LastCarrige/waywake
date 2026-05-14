@@ -25,23 +25,23 @@ const PlanTripScreen = () => {
   return (
     <ImageBackground 
       source={isDark 
-        ? require('../../assets/images/background1.png') 
-        : require('../../assets/images/background_light.png')
+        ? require('../assets/images/background1.png')
+        : require('../assets/images/background_light.png')
       } 
       style={[styles.container, { backgroundColor: isDark ? '#071225' : '#F0F4F8' }]}
       resizeMode="cover"
     >
       {/* Логотип у кутку */}
       <View style={styles.smallLogoContainer}>
-        <Image source={require('../../assets/images/logo_bg.png')} style={styles.logoLayer} resizeMode="contain" />
-        <Image source={require('../../assets/images/logo_moon.png')} style={[styles.logoLayer, { width: '60%', height: '60%' }]} resizeMode="contain" />
-        <Image source={require('../../assets/images/logo_pin.png')} style={[styles.logoLayer, { width: '40%', height: '40%' }]} resizeMode="contain" />
-        <Image source={require('../../assets/images/logo_dot.png')} style={[styles.logoLayer, { width: '15%', height: '15%' }]} resizeMode="contain" />
+        <Image source={require('../assets/images/logo_bg.png')} style={styles.logoLayer} resizeMode="contain" />
+        <Image source={require('../assets/images/logo_moon.png')} style={[styles.logoLayer, { width: '60%', height: '60%' }]} resizeMode="contain" />
+        <Image source={require('../assets/images/logo_pin.png')} style={[styles.logoLayer, { width: '40%', height: '40%' }]} resizeMode="contain" />
+        <Image source={require('../assets/images/logo_dot.png')} style={[styles.logoLayer, { width: '15%', height: '15%' }]} resizeMode="contain" />
       </View>
 
       <View style={styles.header}>
         <Text style={[styles.headerTitle, { color: textColor }]}>Plan Your Trip</Text>
-        <Image source={require('../../assets/images/Header-line.png')} style={[styles.headerLine, { tintColor: textColor }]} resizeMode="stretch" />
+        <Image source={require('../assets/images/Header-line.png')} style={[styles.headerLine, { tintColor: textColor }]} resizeMode="stretch" />
       </View>
 
       <View style={styles.inputList}>

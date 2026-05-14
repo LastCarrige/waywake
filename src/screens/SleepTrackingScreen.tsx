@@ -96,15 +96,15 @@ export default function SleepTrackingScreen() {
 
   return (
     <ImageBackground 
-      source={isDark ? require('../../assets/images/background1.png') : require('../../assets/images/background_light.png')} 
+      source={isDark ? require('../assets/images/background1.png') : require('../assets/images/background_light.png')}
       style={[styles.container, { backgroundColor: isDark ? '#071225' : '#F0F4F8' }]}
       resizeMode="cover"
     >
       <View style={styles.smallLogoContainer}>
-        <Image source={require('../../assets/images/logo_bg.png')} style={styles.logoLayer} resizeMode="contain" />
-        <Image source={require('../../assets/images/logo_moon.png')} style={[styles.logoLayer, { width: '60%', height: '60%' }]} resizeMode="contain" />
-        <Image source={require('../../assets/images/logo_pin.png')} style={[styles.logoLayer, { width: '40%', height: '40%' }]} resizeMode="contain" />
-        <Image source={require('../../assets/images/logo_dot.png')} style={[styles.logoLayer, { width: '15%', height: '15%' }]} resizeMode="contain" />
+        <Image source={require('../assets/images/logo_bg.png')} style={styles.logoLayer} resizeMode="contain" />
+        <Image source={require('../assets/images/logo_moon.png')} style={[styles.logoLayer, { width: '60%', height: '60%' }]} resizeMode="contain" />
+        <Image source={require('../assets/images/logo_pin.png')} style={[styles.logoLayer, { width: '40%', height: '40%' }]} resizeMode="contain" />
+        <Image source={require('../assets/images/logo_dot.png')} style={[styles.logoLayer, { width: '15%', height: '15%' }]} resizeMode="contain" />
       </View>
 
       <View style={styles.header}>
@@ -114,7 +114,7 @@ export default function SleepTrackingScreen() {
           </TouchableOpacity>
           <Text style={[styles.headerTitle, { color: textColor }]}>Tracking</Text>
         </View>
-        <Image source={require('../../assets/images/Header-line.png')} style={[styles.headerLine, { tintColor: textColor }]} resizeMode="stretch" />
+        <Image source={require('../assets/images/Header-line.png')} style={[styles.headerLine, { tintColor: textColor }]} resizeMode="stretch" />
       </View>
 
       <View style={styles.clockSection}>
@@ -131,9 +131,9 @@ export default function SleepTrackingScreen() {
       </View>
 
       <View style={styles.waveContainer}>
-        <Animated.Image source={require('../../assets/images/wave1.png')} style={[styles.waveItem, { transform: [{ translateX: moveAnim1 }] }]} resizeMode="stretch" />
-        <Animated.Image source={require('../../assets/images/wave2.png')} style={[styles.waveItem, styles.waveLayer2, { transform: [{ translateX: moveAnim2 }] }]} resizeMode="stretch" />
-        <Animated.Image source={require('../../assets/images/wave3.png')} style={[styles.waveItem, styles.waveLayer3, { transform: [{ translateX: moveAnim3 }] }]} resizeMode="stretch" />
+        <Animated.Image source={require('../assets/images/wave1.png')} style={[styles.waveItem, { transform: [{ translateX: moveAnim1 }] }]} resizeMode="stretch" />
+        <Animated.Image source={require('../assets/images/wave2.png')} style={[styles.waveItem, styles.waveLayer2, { transform: [{ translateX: moveAnim2 }] }]} resizeMode="stretch" />
+        <Animated.Image source={require('../assets/images/wave3.png')} style={[styles.waveItem, styles.waveLayer3, { transform: [{ translateX: moveAnim3 }] }]} resizeMode="stretch" />
       </View>
 
       <View style={styles.arrivalInfo}>

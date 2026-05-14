@@ -49,17 +49,17 @@ export default function SleepAnalysisScreen() {
 
   return (
     <ImageBackground 
-      source={isDark ? require('../../assets/images/background1.png') : require('../../assets/images/background_light.png')} 
+      source={isDark ? require('../assets/images/background1.png') : require('../assets/images/background_light.png')}
       style={[styles.container, { backgroundColor: isDark ? '#071225' : '#F0F4F8' }]}
       resizeMode="cover"
     >
       {/* ФІКСОВАНА ВЕРХНЯ ЧАСТИНА */}
       <View style={styles.fixedHeader}>
         <View style={styles.smallLogoContainer}>
-          <Image source={require('../../assets/images/logo_bg.png')} style={styles.logoLayer} />
-          <Image source={require('../../assets/images/logo_moon.png')} style={[styles.logoLayer, { width: '60%', height: '60%' }]} />
-          <Image source={require('../../assets/images/logo_pin.png')} style={[styles.logoLayer, { width: '40%', height: '40%' }]} />
-          <Image source={require('../../assets/images/logo_dot.png')} style={[styles.logoLayer, { width: '15%', height: '15%' }]} />
+          <Image source={require('../assets/images/logo_bg.png')} style={styles.logoLayer} />
+          <Image source={require('../assets/images/logo_moon.png')} style={[styles.logoLayer, { width: '60%', height: '60%' }]} />
+          <Image source={require('../assets/images/logo_pin.png')} style={[styles.logoLayer, { width: '40%', height: '40%' }]} />
+          <Image source={require('../assets/images/logo_dot.png')} style={[styles.logoLayer, { width: '15%', height: '15%' }]} />
         </View>
 
         <View style={styles.headerContent}>
@@ -69,7 +69,7 @@ export default function SleepAnalysisScreen() {
             </TouchableOpacity>
             <Text style={[styles.headerTitle, { color: textColor }]}>Sleep analysis</Text>
           </View>
-          <Image source={require('../../assets/images/Header-line.png')} style={[styles.headerLine, { tintColor: textColor }]} resizeMode="stretch" />
+          <Image source={require('../assets/images/Header-line.png')} style={[styles.headerLine, { tintColor: textColor }]} resizeMode="stretch" />
         </View>
       </View>
 
@@ -77,12 +77,12 @@ export default function SleepAnalysisScreen() {
         {/* STATS - Сюди підставляємо реальні hours/mins */}
         <View style={styles.statsRow}>
           <View style={styles.statCard}>
-            <Image source={require('../../assets/images/moon-icon.png')} style={styles.statIcon} resizeMode="contain" />
+            <Image source={require('../assets/images/moon-icon.png')} style={styles.statIcon} resizeMode="contain" />
             <Text style={styles.statLabel}>Sleep Duration</Text>
             <Text style={[styles.statValue, { color: textColor }]}>{hours}h {mins}m</Text>
           </View>
           <View style={styles.statCard}>
-            <Image source={require('../../assets/images/quality-icon.png')} style={styles.statIcon} resizeMode="contain" />
+            <Image source={require('../assets/images/quality-icon.png')} style={styles.statIcon} resizeMode="contain" />
             <Text style={styles.statLabel}>Deep Sleep</Text>
             <Text style={[styles.statValue, { color: '#69beff' }]}>{deepPct}%</Text>
           </View>
@@ -96,9 +96,9 @@ export default function SleepAnalysisScreen() {
             <View style={styles.patternLine} />
           </View>
           <View style={styles.wavePlaceholder}>
-            <Animated.Image source={require('../../assets/images/wave1.png')} style={[styles.waveImage, { transform: [{ translateX: moveAnim1 }], opacity: 0.8 }]} resizeMode="stretch" />
-            <Animated.Image source={require('../../assets/images/wave2.png')} style={[styles.waveImage, { transform: [{ translateX: moveAnim2 }], opacity: 0.6, position: 'absolute' }]} resizeMode="stretch" />
-            <Animated.Image source={require('../../assets/images/wave3.png')} style={[styles.waveImage, { transform: [{ translateX: moveAnim3 }], opacity: 0.4, position: 'absolute' }]} resizeMode="stretch" />
+            <Animated.Image source={require('../assets/images/wave1.png')} style={[styles.waveImage, { transform: [{ translateX: moveAnim1 }], opacity: 0.8 }]} resizeMode="stretch" />
+            <Animated.Image source={require('../assets/images/wave2.png')} style={[styles.waveImage, { transform: [{ translateX: moveAnim2 }], opacity: 0.6, position: 'absolute' }]} resizeMode="stretch" />
+            <Animated.Image source={require('../assets/images/wave3.png')} style={[styles.waveImage, { transform: [{ translateX: moveAnim3 }], opacity: 0.4, position: 'absolute' }]} resizeMode="stretch" />
           </View>
         </View>
 

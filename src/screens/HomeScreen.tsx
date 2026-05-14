@@ -24,8 +24,8 @@ export default function HomeScreen() {
   return (
     <ImageBackground 
       source={isDark 
-        ? require('../assets /images/background1.png') 
-        : require('../../assets/images/background_light.png')
+        ? require('../assets/images/background1.png')
+        : require('../assets/images/background_light.png')
       } 
       style={[styles.container, { backgroundColor: isDark ? '#071225' : '#F0F4F8' }]}
       resizeMode="cover"
@@ -37,7 +37,7 @@ export default function HomeScreen() {
           onPress={() => navigation.navigate('Settings')}
         >
           <Image 
-            source={require('../../assets/images/settings-icon.png')} 
+            source={require('../assets/images/settings-icon.png')}
             style={{ width: 24, height: 24, tintColor: textColor }} 
           />
         </TouchableOpacity>
@@ -48,7 +48,7 @@ export default function HomeScreen() {
           onPress={() => navigation.navigate('SleepAnalysis')}
         >
           <Image 
-            source={require('../../assets/images/analytics-icon.png')} 
+            source={require('../assets/images/analytics-icon.png')}
             style={{ width: 24, height: 24, tintColor: textColor }} 
           />
         </TouchableOpacity>
@@ -57,23 +57,23 @@ export default function HomeScreen() {
       <View style={styles.content}>
         <View style={styles.logoStack}>
           <Image 
-            source={require('../../assets/images/logo_bg.png')} 
+            source={require('../assets/images/logo_bg.png')}
             style={styles.bgLayer} 
             resizeMode="contain"
           />
           <View style={styles.iconWrapper}>
             <Image 
-              source={require('../../assets/images/logo_moon.png')} 
+              source={require('../assets/images/logo_moon.png')}
               style={[styles.logoLayer, styles.moonLayer]} 
               resizeMode="contain"
             />
             <Image 
-              source={require('../../assets/images/logo_pin.png')} 
+              source={require('../assets/images/logo_pin.png')}
               style={[styles.logoLayer, styles.pinLayer]} 
               resizeMode="contain"
             />
             <Image 
-              source={require('../../assets/images/logo_dot.png')} 
+              source={require('../assets/images/logo_dot.png')}
               style={[styles.logoLayer, styles.dotLayer]} 
               resizeMode="contain"
             />
